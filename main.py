@@ -4,6 +4,9 @@ from leet_code.remove_element import remove_element_two, remove_element
 from leet_code.first_missing_positive import first_missing_positive, first_missing_positive_two
 from leet_code.running_sum import running_sum, running_sum_two
 from leet_code.max_wealth import max_wealth, max_wealth_two
+from leet_code.sub_rectangle_queries import SubRectangleQueries
+from leet_code.find_repeat_number import find_repeat_number, find_repeat_number_two, find_repeat_number_three, \
+    find_repeat_number_four, find_repeat_number_five
 
 
 def main():
@@ -11,7 +14,9 @@ def main():
     # remove_element_test()
     # first_missing_positive_test()
     # running_sum_test()
-    max_wealth_test()
+    # max_wealth_test()
+    # sub_rectangle_queries_test()
+    find_repeat_number_test()
 
 
 def two_num_sum_test():
@@ -84,6 +89,47 @@ def max_wealth_test():
     end_two = time.perf_counter_ns()
     print(end_two - start_two)
     print(result_two)
+
+
+def sub_rectangle_queries_test():
+    sub_rectangle_queries = SubRectangleQueries([[1, 2, 1], [4, 3, 4], [3, 2, 1], [1, 1, 1]])
+    result = sub_rectangle_queries.get_value(0, 2)
+    print(result)
+    sub_rectangle_queries.update_sub_rectangle(0, 0, 3, 2, 5)
+    print(sub_rectangle_queries.data)
+
+
+def find_repeat_number_test():
+    nums = [2, 3, 1, 0, 2, 5, 3]
+    start = time.perf_counter_ns()
+    result = find_repeat_number(nums)
+    end = time.perf_counter_ns()
+    print(end - start)
+    print(result)
+
+    start_two = time.perf_counter_ns()
+    result_two = find_repeat_number_two(nums)
+    end_two = time.perf_counter_ns()
+    print(end_two - start_two)
+    print(result_two)
+
+    start_three = time.perf_counter_ns()
+    result_three = find_repeat_number_three(nums)
+    end_three = time.perf_counter_ns()
+    print(end_three - start_three)
+    print(result_three)
+
+    start_four = time.perf_counter_ns()
+    result_four = find_repeat_number_four(nums)
+    end_four = time.perf_counter_ns()
+    print(end_four - start_four)
+    print(result_four)
+
+    start_five = time.perf_counter_ns()
+    result_five = find_repeat_number_five(nums)
+    end_five = time.perf_counter_ns()
+    print(end_five - start_five)
+    print(result_five)
 
 
 if __name__ == "__main__":
