@@ -7,6 +7,7 @@ from leet_code.max_wealth import max_wealth, max_wealth_two
 from leet_code.sub_rectangle_queries import SubRectangleQueries
 from leet_code.find_repeat_number import find_repeat_number, find_repeat_number_two, find_repeat_number_three, \
     find_repeat_number_four, find_repeat_number_five
+from leet_code.find_number_in_two_dimen_array import find_number_in_two_dimen_array, find_number_in_two_dimen_array_two
 
 
 def main():
@@ -16,7 +17,8 @@ def main():
     # running_sum_test()
     # max_wealth_test()
     # sub_rectangle_queries_test()
-    find_repeat_number_test()
+    # find_repeat_number_test()
+    find_number_in_two_dimen_array_test()
 
 
 def two_num_sum_test():
@@ -130,6 +132,22 @@ def find_repeat_number_test():
     end_five = time.perf_counter_ns()
     print(end_five - start_five)
     print(result_five)
+
+
+def find_number_in_two_dimen_array_test():
+    matrix = [[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]]
+    target = 5
+    start = time.perf_counter_ns()
+    result = find_number_in_two_dimen_array(matrix, target)
+    end = time.perf_counter_ns()
+    print(end - start)
+    print(result)
+
+    start_two = time.perf_counter_ns()
+    result_two = find_number_in_two_dimen_array_two(matrix, target)
+    end_two = time.perf_counter_ns()
+    print(end_two - start_two)
+    print(result_two)
 
 
 if __name__ == "__main__":
