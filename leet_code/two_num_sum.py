@@ -1,4 +1,24 @@
 from typing import List
+import time
+
+
+def two_num_sum_test():
+    """
+    测试方法
+    :return: 无返回
+    """
+    nums = [1, 3, 5, 7, 9, 12, 13, 19, 20]
+    target = int(23)
+    start = time.perf_counter_ns()
+    result = two_sum(nums, target)
+    end = time.perf_counter_ns()
+    print(end - start)
+    print(result)
+    start_dict = time.perf_counter_ns()
+    result_dict = two_sum_dict(nums, target)
+    end_dict = time.perf_counter_ns()
+    print(end_dict - start_dict)
+    print(result_dict)
 
 
 def two_sum_dict(nums: List[int], target: int) -> List[int]:

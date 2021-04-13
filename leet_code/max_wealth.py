@@ -1,4 +1,24 @@
+import time
 from typing import List
+
+
+def max_wealth_test():
+    """
+    测试方法
+    :return: 无返回
+    """
+    accounts = [[1, 2, 3], [1, 4, 5], [1, 4, 7]]
+    start = time.perf_counter_ns()
+    result = max_wealth(accounts)
+    end = time.perf_counter_ns()
+    print(end - start)
+    print(result)
+
+    start_two = time.perf_counter_ns()
+    result_two = max_wealth_two(accounts)
+    end_two = time.perf_counter_ns()
+    print(end_two - start_two)
+    print(result_two)
 
 
 def max_wealth(accounts: List[List[int]]) -> int:

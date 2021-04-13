@@ -1,4 +1,23 @@
+import time
 from typing import List
+
+
+def first_missing_positive_test():
+    """
+    测试方法
+    :return: 无返回
+    """
+    nums = [1, 3, 6, 7, 9]
+    start = time.perf_counter_ns()
+    result = first_missing_positive(nums)
+    end = time.perf_counter_ns()
+    print(end - start)
+    print(result)
+    start_two = time.perf_counter_ns()
+    result_two = first_missing_positive_two(nums)
+    end_two = time.perf_counter_ns()
+    print(end_two - start_two)
+    print(result_two)
 
 
 def first_missing_positive(nums: List[int]) -> int:

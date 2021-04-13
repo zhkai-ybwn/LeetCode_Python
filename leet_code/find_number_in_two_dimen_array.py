@@ -1,4 +1,25 @@
+import time
 from typing import List
+
+
+def find_number_in_two_dimen_array_test():
+    """
+    测试方法
+    :return: 无返回
+    """
+    matrix = [[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]]
+    target = 5
+    start = time.perf_counter_ns()
+    result = find_number_in_two_dimen_array(matrix, target)
+    end = time.perf_counter_ns()
+    print(end - start)
+    print(result)
+
+    start_two = time.perf_counter_ns()
+    result_two = find_number_in_two_dimen_array_two(matrix, target)
+    end_two = time.perf_counter_ns()
+    print(end_two - start_two)
+    print(result_two)
 
 
 def find_number_in_two_dimen_array(

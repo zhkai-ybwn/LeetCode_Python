@@ -1,4 +1,24 @@
+import time
 from typing import List
+
+
+def running_sum_test():
+    """
+    测试方法
+    :return: 无返回
+    """
+    nums = [1, 2, 3, 4]
+    start = time.perf_counter_ns()
+    result = running_sum(nums)
+    end = time.perf_counter_ns()
+    print(end - start)
+    print(result)
+
+    start_two = time.perf_counter_ns()
+    result_two = running_sum_two(nums)
+    end_two = time.perf_counter_ns()
+    print(end_two - start_two)
+    print(result_two)
 
 
 def running_sum(nums: List[int]) -> List[int]:

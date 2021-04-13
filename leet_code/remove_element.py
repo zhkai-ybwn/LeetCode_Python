@@ -1,4 +1,24 @@
+import time
 from typing import List
+
+
+def remove_element_test():
+    """
+    测试方法
+    :return: 无返回
+    """
+    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    val = 2
+    start = time.perf_counter_ns()
+    result = remove_element(nums, val)
+    print(result)
+    end = time.perf_counter_ns()
+    print(end - start)
+    start_two = time.perf_counter_ns()
+    result_two = remove_element_two(nums, val)
+    print(result_two)
+    end_two = time.perf_counter_ns()
+    print(end_two - start_two)
 
 
 def remove_element(nums: List[int], val: int) -> int:

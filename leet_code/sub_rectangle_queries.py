@@ -1,6 +1,18 @@
 from typing import List
 
 
+def sub_rectangle_queries_test():
+    """
+    测试方法
+    :return: 无返回
+    """
+    sub_rectangle_queries = SubRectangleQueries([[1, 2, 1], [4, 3, 4], [3, 2, 1], [1, 1, 1]])
+    result = sub_rectangle_queries.get_value(0, 2)
+    print(result)
+    sub_rectangle_queries.update_sub_rectangle(0, 0, 3, 2, 5)
+    print(sub_rectangle_queries.data)
+
+
 class SubRectangleQueries:
     def __init__(self, rectangle: List[List[int]]):
         self.data = rectangle
