@@ -1,4 +1,5 @@
 from leet_code.replace_space import replace_space_test
+from leet_code.reverse_print import reverse_print_test
 
 
 def main():
@@ -10,7 +11,8 @@ def main():
     # sub_rectangle_queries_test()
     # find_repeat_number_test()
     # find_number_in_two_dimen_array_test()
-    replace_space_test()
+    # replace_space_test()
+    reverse_print_test()
 
 
 if __name__ == "__main__":
